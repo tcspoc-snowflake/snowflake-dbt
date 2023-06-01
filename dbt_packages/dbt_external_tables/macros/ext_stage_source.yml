@@ -1,7 +1,6 @@
 version: 2
 sources:
 - name: delta_customer
-  database: CUST360_DEV
   schema: EXT_TABLES
   loader: ADLS
   tables:
