@@ -38,7 +38,13 @@ models:
       materialized: view
 
 on-run-start:
-    - '{{create_udfs()}}'
+    - '{{udfs("CREATE_FUNCTION")}}'
+    - '{{ dbt_external_tables.stage_external_sources("ext_full_refresh: true") }}'
+    - '{{udfs("REFRESH_EXTERNAL_TABLE")}}'
+
+on-run-end:
+    - '{{udfs("REFRESH_EXTERNAL_TABLE")}}'
 
 vars:
   external_stage: "('@blobsnowflakepoc/Sample_Superstore.xls')"
+  external_table: "EXT_TABLES.EXT_CUSTOMER"

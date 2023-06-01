@@ -2,20 +2,14 @@
 version: 2
 
 models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
+    - name: returns
+      description: "Returns Data across all customers"
       columns:
-          - name: id
-            description: "The primary key for this table"
+          - name: RETURNED
+            description: "Flag to understand if order is returned or not"
             tests:
-                - unique
                 - not_null
-
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
+          - name: ORDERID
+            description: "Order returned"
             tests:
-                - unique
                 - not_null

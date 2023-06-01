@@ -14,7 +14,8 @@ import xlrd
 import pandas
 def compute():
     pat = os.path.join(sys._xoptions["snowflake_import_directory"], 'Sample_Superstore.xls')
-    df = pandas.read_excel(pat,index_col=None)
+    colnames = ['PERSON', 'REGION']
+    df = pandas.read_excel(pat,index_col=None,sheet_name='People',names=colnames)
     parsed = df.to_json(orient="records")
     return parsed
 $$
