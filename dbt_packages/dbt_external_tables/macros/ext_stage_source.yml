@@ -1,0 +1,32 @@
+version: 2
+sources:
+- name: delta_customer
+  database: CUST360_DEV
+  schema: EXT_TABLES
+  loader: ADLS
+  tables:
+    - name: EXT_CUSTOMER
+      description: External Table for Customer data
+      external:
+        location: "@azr_dbs_delta_stage/" ##reference an existing external stage 
+        file_format: "(TYPE = PARQUET)"
+        table_format: DELTA
+        auto_refresh: false
+        refresh_on_create: false
+      columns:
+        - name: ID ## you can input any name
+          data_type: varchar ## best to use varchar for all
+        - name: Name ## you can input any name
+          data_type: varchar ## best to use varchar for all
+        - name: Address ## you can input any name
+          data_type: varchar ## best to use varchar for all
+        - name: City ## you can input any name
+          data_type: varchar ## best to use varchar for all
+        - name: PostCode ## you can input any name
+          data_type: varchar ## best to use varchar for all
+        - name: State ## you can input any name
+          data_type: varchar ## best to use varchar for all
+        - name: Company ## you can input any name
+          data_type: varchar ## best to use varchar for all
+        - name: Contact ## you can input any name
+          data_type: varchar ## best to use varchar for all
