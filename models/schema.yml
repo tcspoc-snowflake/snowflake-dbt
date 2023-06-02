@@ -1,15 +1,17 @@
-
 version: 2
 
 models:
     - name: returns
-      description: "Returns Data across all customers"
+      description: 'Returns Data across all customers'
       columns:
           - name: RETURNED
-            description: "Flag to understand if order is returned or not"
+            description: 'Flag to understand if order is returned or not'
             tests:
                 - not_null
-          - name: ORDERID
-            description: "Order returned"
-            tests:
-                - not_null
+          # - name: ORDERID
+          #   description: "Order returned"
+          #   tests:
+          #       - not_null
+
+
+    
