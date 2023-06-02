@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: agg_orders_exsum
+    description: This table contains summarized and aggregrated orders information for executives.
+
+    columns:
+      - name: YEARMONTHNUM
+        description: Year Month number
+      - name: MONTH_NAME
+        description: Month Name
+      - name: CALENDAR_QUARTER
+        description: Quarter Name
+      - name: TOTAL_CUSTOMERS
+        description: Total number of Customers
+      - name: PERSON
+        description: Regional Manager
+      - name: REGION
+        description: Region Name
+      - name: COUNTRY
+        description: Country Name
+      - name: CATEGORY
+        description: Category Name
+      - name: TOTAL_ORDERS
+        description: Total Number of Orders processed
+      - name: TOTAL_RETURNED_ORDERS
+        description: Total Number for Orders returned
+      - name: TOTAL_SALES
+        description: Total Sales Value
+      - name: TOTAL_QUANTITY
+        description: Total Quantity ordered
+      - name: TOTAL_DISCOUNT
+        description: Total Discount provided
+      - name: TOTAL_PROFIT
+        description: Total Profit gained
+      - name: RETURNED_SALES
+        description: Total Sales value returned
+      - name: RETURNED_QUANTITY
+        description: Total Returned Quantity
+      - name: RETURNED_DISCOUNT
+        description: Total Discount negated
+      - name: RETURNED_PROFIT
+        description: Total Profit negated
