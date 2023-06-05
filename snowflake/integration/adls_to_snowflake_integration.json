@@ -1,0 +1,11 @@
+{
+  "integration_name": "azr_dbs_integration",
+  "integration_type": "storage",
+  "enabled": true,
+  "type": "EXTERNAL_STAGE",
+  "storage_provider": "AZURE",
+  "azure_tenant_id": "'3729b040-caed-4a8b-b299-2f736618840e'",
+  "storage_allowed_locations": [
+    "'azure://adlsgen2snowflakepoc2.blob.core.windows.net/raw-data/'"
+  ]
+}
