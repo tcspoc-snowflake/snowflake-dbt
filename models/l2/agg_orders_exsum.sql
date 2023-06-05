@@ -23,7 +23,7 @@ A as (
 
 C as (
 
-    select * from {{ ref('dim_datemmyy')}}
+    select * from {{ ref('dim_date')}}
 ),
 
 P as (

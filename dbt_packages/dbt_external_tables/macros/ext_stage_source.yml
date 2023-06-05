@@ -1,10 +1,10 @@
 version: 2
 sources:
-- name: delta_customer
+- name: delta_tables
   schema: EXT_TABLES
   loader: ADLS
   tables:
-    - name: EXT_CUSTOMER
+    - name: ext_customer
       description: External Table for Customer data
       external:
         location: "@azr_dbs_delta_stage/" ##reference an existing external stage 
