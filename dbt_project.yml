@@ -35,12 +35,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   snowflakedbt:
     # Config indicated by + and applies to all files under models/
-    l0:
+   l1:
       +materialized: table
-    l1:
+   l2:
       +materialized: table
-    l2:
-      +materialized: table
+
+   landing:
+       +materialized: table
 
 on-run-start:
     - '{{udfs("CREATE_FUNCTION")}}'

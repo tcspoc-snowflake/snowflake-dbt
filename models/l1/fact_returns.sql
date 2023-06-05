@@ -2,7 +2,7 @@
 
 with retunrs as (
     
-    select * from {{ ref('returns') }} 
+    select * from {{ ref('returns_seed') }} 
 ),
 final as (
     select

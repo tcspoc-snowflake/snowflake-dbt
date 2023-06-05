@@ -7,7 +7,7 @@ with orders as (
 ),
 people as(
 
-    select * from {{ ref('people')}}
+    select * from {{ ref('people_seed')}}
 
 ),
 final as (

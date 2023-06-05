@@ -1,17 +1,39 @@
 version: 2
 
+# models:
+#     - name: l1
+#       description: "customer details"
+#       columns:
+#           - name: customer_id
+#             description: "The primary key for this table"
+#             tests:
+#                 - unique
+#                 - not_null
+
+#     - name: dim_products
+#       description: "product details"
+#       columns:
+#           - name: id
+#             description: "The primary key for this table"
+#             tests:
+#                 - unique
+#                 - not_null
+
 models:
-    - name: returns
-      description: 'Returns Data across all customers'
+    - name: l2
+      description: "Returns Data across all customers"
       columns:
-          - name: RETURNED
-            description: 'Flag to understand if order is returned or not'
+          - name: RETURNID
+            description: "Flag to understand if order is returned or not"
             tests:
+                - unique
                 - not_null
-          # - name: ORDERID
-          #   description: "Order returned"
-          #   tests:
-          #       - not_null
+
+          - name: ORDERID
+            description: "Order returned"
+            tests:
+                - unique
+                - not_null
 
 
     
