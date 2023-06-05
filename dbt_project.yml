@@ -51,6 +51,10 @@ on-run-start:
 on-run-end:
     - '{{udfs("REFRESH_EXTERNAL_TABLE")}}'
 
+
 vars:
   external_stage: "('@blobsnowflakepoc/Sample_Superstore.xls')"
   external_table: "EXT_TABLES.EXT_CUSTOMER"
+  snowflake_user_file: snowflake/users/users.yml
+  snowflake_network_policy_file: snowflake/policy/network_policies.yml
+  snowflake_admin: tcspocadmin

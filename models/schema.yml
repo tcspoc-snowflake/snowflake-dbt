@@ -34,6 +34,13 @@ models:
             tests:
                 - unique
                 - not_null
+<<<<<<< HEAD
+=======
+          - name: ORDERID
+            description: "Order returned"
+            tests:
+                - not_null
+>>>>>>> d474c634736526e3380cea2d1272fad9c4929e1d
 
 
     
