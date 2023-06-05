@@ -22,7 +22,6 @@ snapshot-paths: ["snapshots"]
 target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
-  - "dbt_packages"
 
 
 # Configuring models
@@ -60,4 +59,4 @@ vars:
   external_table: "EXT_TABLES.EXT_CUSTOMER"
   snowflake_user_file: snowflake/users/users.yml
   snowflake_network_policy_file: snowflake/policy/network_policies.yml
-  snowflake_admin: tcspocadmin
+  snowflake_admin: accountadmin
