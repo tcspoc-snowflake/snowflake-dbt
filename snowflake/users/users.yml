@@ -1,38 +1,37 @@
-users:
-  - name: TCSPOCADMIN
-    attributes:
-      login_name: TCSPOCADMIN
-      display_name: TCSPOCADMIN
-      first_name: Sarath
-      last_name: Kunala
-      email: tcspoc-sk@outlook.com
-      disabled: false
-      default_warehouse: COMPUTE_WH
-      default_role: ACCOUNTADMIN
-    roles:
-      - ACCOUNTADMIN
-      - ORGADMIN
-  - name: SARATH
-    attributes:
-      login_name: SK
-      display_name: SARATH
-      first_name: Sarath
-      last_name: Kunala
-      email: chandu402240@gmail.com
-      disabled: false
-      default_warehouse: COMPUTE_WH
-      default_role: ACCOUNTADMIN
-    roles:
-      - ACCOUNTADMIN
-  - name: DBT
-    attributes:
-      login_name: DBT
-      display_name: dbt
-      first_name: Sarath
-      last_name: Kunala
-      email: tcspoc-sk@outlook.com
-      disabled: false
-      default_warehouse: COMPUTE_WH
-      default_role: ACCOUNTADMIN
-    roles:
-      - ACCOUNTADMIN
+- name: TCSPOCADMIN
+  attributes:
+    login_name: TCSPOCADMIN
+    display_name: TCSPOCADMIN
+    first_name: Sarath
+    last_name: Kunala
+    email: tcspoc-sk@outlook.com
+    disabled: false
+    default_warehouse: COMPUTE_WH
+    default_role: ACCOUNTADMIN
+  roles:
+    - ACCOUNTADMIN
+    - ORGADMIN
+- name: SARATH
+  attributes:
+    login_name: SK
+    display_name: SARATH
+    first_name: Sarath
+    last_name: Kunala
+    email: chandu402240@gmail.com
+    disabled: false
+    default_warehouse: COMPUTE_WH
+    default_role: ACCOUNTADMIN
+  roles:
+    - ACCOUNTADMIN
+- name: DBT
+  attributes:
+    login_name: DBT
+    display_name: dbt
+    first_name: Sarath
+    last_name: Kunala
+    email: tcspoc-sk@outlook.com
+    disabled: false
+    default_warehouse: COMPUTE_WH
+    default_role: ACCOUNTADMIN
+  roles:
+    - ACCOUNTADMIN
