@@ -3,7 +3,6 @@ version: 2
 models:
   - name: agg_orders_exsum
     description: This table contains summarized and aggregrated orders information for executives.
-
     columns:
       - name: YEARMONTHNUM
         description: Year Month number
@@ -41,3 +40,15 @@ models:
         description: Total Discount negated
       - name: RETURNED_PROFIT
         description: Total Profit negated
+
+  - name: returns
+    description: "Returns Data across all customers"
+    columns:
+      - name: RETURNED
+        description: "Flag to understand if order is returned or not"
+        tests:
+          - not_null
+      - name: ORDERID
+        description: "Order returned"
+        tests:
+          - not_null
