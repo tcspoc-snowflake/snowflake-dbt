@@ -58,7 +58,7 @@ final as (
       inner join dim_product E on D.CUSTOMER_ID=E.CUSTOMER_ID
       inner join fact_orders B on B.product_id=E.product_id
       right outer join FACT_RETURNS A on A.order_id=B.order_id
-      inner join dim_datemmyy C on C.date=B.ORDER_DATE
+      inner join dim_date C on C.date=B.ORDER_DATE
 
       Group By 
      
