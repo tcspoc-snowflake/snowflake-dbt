@@ -1,6 +1,6 @@
 {{ config(materialized='table') }}
 
-with retunrs as (
+with returns as (
     
     select * from {{ ref('returns_seed') }} 
 ),
