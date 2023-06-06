@@ -1,10 +1,10 @@
 version: 2
 
 models:
-    - name: l2
+    - name: returns
       description: "Returns Data across all customers"
       columns:
-          - name: RETURNID
+          - name: RETURNED
             description: "Flag to understand if order is returned or not"
             tests:
                 - unique
