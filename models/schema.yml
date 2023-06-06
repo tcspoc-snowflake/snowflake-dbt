@@ -7,7 +7,6 @@ models:
           - name: RETURNED
             description: "Flag to understand if order is returned or not"
             tests:
-                - unique
                 - not_null
           - name: ORDERID
             description: "Order returned"
