@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'my_new_project'
+name: 'snowflake_dbt'
 version: '1.0.0'
 config-version: 2
 
@@ -22,7 +22,6 @@ snapshot-paths: ["snapshots"]
 target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
-  - "dbt_packages"
 
 
 # Configuring models
@@ -31,8 +30,33 @@ clean-targets:         # directories to be removed by `dbt clean`
 # In this example config, we tell dbt to build all models in the example/ directory
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
+
 models:
-  my_new_project:
-    # Applies to all files under models/example/
-    example:
-      materialized: view
+  snowflake_dbt:
+    # Config indicated by + and applies to all files under models/
+    landing:
+      materialized: table
+    l0:
+      materialized: table
+    l1:
+      materialized: table
+    l2:
+      materialized: table
+    snowpark:
+      materialized: table
+
+on-run-start:
+    - '{{udfs("CREATE_FUNCTION")}}'
+    - '{{ dbt_external_tables.stage_external_sources("ext_full_refresh: true") }}'
+    - '{{udfs("REFRESH_EXTERNAL_TABLE")}}'
+
+on-run-end:
+    - '{{udfs("REFRESH_EXTERNAL_TABLE")}}'
+
+
+vars:
+  external_stage: "('@blobsnowflakepoc/Sample_Superstore.xls')"
+  external_table: "EXT_TABLES.EXT_CUSTOMER"
+  snowflake_user_file: snowflake/users/users.yml
+  snowflake_network_policy_file: snowflake/policy/network_policies.yml
+  snowflake_admin: accountadmin
