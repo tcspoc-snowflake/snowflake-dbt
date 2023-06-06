@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'snowflakedbt'
+name: 'snowflake_dbt'
 version: '1.0.0'
 config-version: 2
 
@@ -22,7 +22,6 @@ snapshot-paths: ["snapshots"]
 target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
-  - "dbt_packages"
 
 
 # Configuring models
@@ -33,14 +32,17 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  snowflakedbt:
+  snowflake_dbt:
     # Config indicated by + and applies to all files under models/
+   landing:
+      +materialized: table
+   l0:
+      +materialized: table
    l1:
       +materialized: table
    l2:
       +materialized: table
-
-   landing:
+   snowpark:
        +materialized: table
 
 on-run-start:
@@ -57,4 +59,4 @@ vars:
   external_table: "EXT_TABLES.EXT_CUSTOMER"
   snowflake_user_file: snowflake/users/users.yml
   snowflake_network_policy_file: snowflake/policy/network_policies.yml
-  snowflake_admin: tcspocadmin
+  snowflake_admin: accountadmin

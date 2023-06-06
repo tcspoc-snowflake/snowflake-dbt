@@ -1,24 +1,5 @@
 version: 2
 
-# models:
-#     - name: l1
-#       description: "customer details"
-#       columns:
-#           - name: customer_id
-#             description: "The primary key for this table"
-#             tests:
-#                 - unique
-#                 - not_null
-
-#     - name: dim_products
-#       description: "product details"
-#       columns:
-#           - name: id
-#             description: "The primary key for this table"
-#             tests:
-#                 - unique
-#                 - not_null
-
 models:
     - name: l2
       description: "Returns Data across all customers"
@@ -28,19 +9,10 @@ models:
             tests:
                 - unique
                 - not_null
-
-          - name: ORDERID
-            description: "Order returned"
-            tests:
-                - unique
-                - not_null
-<<<<<<< HEAD
-=======
           - name: ORDERID
             description: "Order returned"
             tests:
                 - not_null
->>>>>>> d474c634736526e3380cea2d1272fad9c4929e1d
 
 
     
